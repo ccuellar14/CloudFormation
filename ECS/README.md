@@ -13,18 +13,7 @@
 - ¿Qué es ECS?
 - ¿Qué es CloudFormation?
 
-### 2. Infraestructura de Cluster ECS
-- Network
-  - VPC
-  - Subnet
-  - LoadBalancer
-- Computo
-  - Instancias EC2
-  - Imagenes Automatizadas AMI
-- ALmacenamiento
-  - Volumenes EBS
-
-### 3. Componentes de ECS
+### 2. Componentes de ECS
  - Cluster
  - Instancia Contenedor
  - Definición de Tareas
@@ -33,8 +22,8 @@
  - Tareas
  - Contenedor
 
-### 4. Descomponiendo JSON
- - Template CloudFormation ***JSON***
+### 3. Template
+ - [Template CloudFormation ***JSON***](https://github.com/ccuellar14/CloudFormation/blob/master/ECS/Cluster_ECS.json"Cluster_ECS.json")
  -
 
 -----
@@ -47,3 +36,31 @@ El EC2 Servicio de contenedor de Amazon **(Amazon ECS)** es un servicio altament
 Puede utilizar Amazon ECS para programar la colocación de contenedores en base a su necesidades de recursos a través de su grupo, las políticas de aislamiento, y los requisitos de disponibilidad. Amazon ECS elimina la necesidad de hacer funcionar sus propios sistemas de gestión de cluster y de gestión de configuración o preocupación acerca de la expansión de su infraestructura de gestión.
 
 #### ¿Qué CloudFormation?
+CloudFormation es un producto de AWS que ofrece a desarrolladores y administradores de sistemas un método sencillo de crear una colección de recursos de AWS relacionados entre sí para ofrecerlos de una manera ordenada y predecible.
+
+
+### 2. Componentes de ECS
+#### Cluster
+Es una agrupación lógica de instancias del contenedor de EC2 en las que se puede colocar tareas y configuraciones especificas y personalizadas.
+
+#### Instancia Contenedor
+Son instancias de EC2 que ejecutan el Agente de ECS y se registran al Cluster.
+
+#### Definición de Tareas
+Descripción de una aplicación que contiene una o más definiciones dentro contenedor.
+
+#### Programador de Tareas
+El método utilizado para la colocación de tareas en instancias dentro de los contenedores.
+
+#### Servicios
+Un servicio de Amazon ECS le permite ejecutar y mantener un determinado número de instancias de forma simultanea.
+
+#### Tareas
+Una instancia de una definición de la tarea que se está ejecutando en una instancia del contenedor.
+
+#### Contenedor
+Un contenedor de Linux que se creó como parte de una tarea.
+
+
+### 3. Template
+Es un archivo de texto con formato JSON (Javascript Object Notation) que describe la infraestructura de AWS necesaria para ejecutar una aplicación o un servicio, junto con las interconexiones que existan entre ellos.
